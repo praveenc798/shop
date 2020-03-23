@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production MONGO_USER=root MONGO_PASSWORD=root MONGO_DEFAULT_DATABASE=node STRIPE_KEY=pk_test_aFd9fGXekOHzzk2FuwlWzKiI00OFvhh6B3 node app.js",
+    "start": "NODE_ENV=production MONGO_USER=root MONGO_PASSWORD=root MONGO_DEFAULT_DATABASE=test STRIPE_KEY=pk_test_aFd9fGXekOHzzk2FuwlWzKiI00OFvhh6B3 node app.js",
     "start-server": "node app.js",
     "start:dev": "nodemon app.js"
   },
@@ -41,5 +41,8 @@
     "pug": "^2.0.3",
     "sequelize": "^5.0.0-beta.11",
     "stripe": "^6.12.1"
+  },
+  "optionalDependencies": {
+    "win-node-env": "^0.4.0"
   }
 }
