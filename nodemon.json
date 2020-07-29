@@ -2,7 +2,7 @@
     "env": {
         "MONGO_USER": "root",
         "MONGO_PASSWORD": "root",
-        "MONGO_DEFAULT_DATABASE": "test",
+        "MONGO_DEFAULT_DATABASE": "node",
         "STRIPE_KEY": "pk_test_aFd9fGXekOHzzk2FuwlWzKiI00OFvhh6B3"
     }
 }

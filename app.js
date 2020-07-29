@@ -19,9 +19,7 @@ const shopController = require('./controllers/shop');
 const isAuth = require('./middleware/is-auth');
 const User = require('./models/user');
 
-const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${
-  process.env.MONGO_PASSWORD
-}@cluster0-ge2uk.mongodb.net${process.env.MONGO_DEFAULT_DATABASE}`;
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.ge2uk.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
 
 const app = express();
 const store = new MongoDBStore({
@@ -38,7 +36,7 @@ const fileStorage = multer.diskStorage({
     cb(null, 'images');
   },
   filename: (req, file, cb) => {
-    cb(null, new Date().toISOString() + '-' + file.originalname);
+    cb(null, new Date().toISOString().replace(/:/g, '-')+ '-' + file.originalname);
   }
 });
 
